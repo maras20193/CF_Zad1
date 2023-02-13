@@ -3,5 +3,8 @@ export const theme = {
     bgc: "#fff",
     text: "#000",
     primary: "#5497fc",
+    post: {
+      bgc: "whitesmoke",
+    },
   },
 };

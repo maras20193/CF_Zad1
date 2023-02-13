@@ -20,20 +20,20 @@ export const Post = ({ data, isOpen }: PostProps) => (
   <S.Wrapper>
     {isOpen ? (
       <>
-        <h2>{data.title}</h2>
+        <S.Title>{data.title}</S.Title>
         <p>{data.content}</p>
       </>
     ) : (
       <>
-        <NavLink to={`${routes.blog}/${data.slug}`}>
-          <h2>{data.title}</h2>
-        </NavLink>
+        <S.Title>
+          <NavLink to={`${routes.blog}/${data.slug}`}>{data.title}</NavLink>
+        </S.Title>
         <p>{data.entry}</p>
       </>
     )}
-    <div>
+    <S.DetailsWrapper>
       <p>{data.author}</p>
       <p>{data.date}</p>
-    </div>
+    </S.DetailsWrapper>
   </S.Wrapper>
 );
